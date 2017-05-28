@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TV</title>
+    <link rel="stylesheet" type="text/css" href="static/style.css"/>
+    <link rel="stylesheet" type="text/css" href="static/bootstrap.min.css"/>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row" style="padding: 5px;">
+        <button class="btn btn-danger col-12 tv-{{tv_state}} " onclick="location.href='off'" type="button">Turn TV off
+        </button>
+
+    </div>
+        {% for btn in buttons %}
+        <button
+                class="btn btn-secondary btn-tv"
+                href="button/{{ btn['id'] }}"
+                style="background-image: url(static/buttons/{{ btn['icon'] }})"
+                onclick="location.href='button/{{ btn.id }}'"
+        >&nbsp;</button>
+        {% endfor %}
+</div>
+
+</body>
+</html>

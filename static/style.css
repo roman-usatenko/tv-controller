@@ -1,0 +1,13 @@
+.tv-on {
+    width: 100%;
+    padding: 5px;
+}
+
+.tv-off {
+    display: none !important;
+}
+
+.btn-tv {
+    width: 100px !important;
+    height: 100px !important;
+}
