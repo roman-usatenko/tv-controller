@@ -5,7 +5,7 @@ if [ $? -eq 0 ]; then
     while true; do
         git pull
         #sudo openvt -e -f -c 1
-        python web.py
+        sudo python web.py
         echo Restarting....
         sleep 5
     done
