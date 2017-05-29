@@ -9,7 +9,7 @@ from screen import BackLight
 app = Flask(__name__)
 # app.debug = False
 BUTTONS = {}
-backlight = BackLight()
+#backlight = BackLight()
 
 
 @app.route('/')
@@ -44,12 +44,14 @@ def shutdown():
 
 @app.route('/bl-on')
 def backlight_on():
-    backlight.on()
+    #backlight.on()
+    return redirect("/", code=302)
 
 
 @app.route('/bl-off')
 def backlight_off():
-    backlight.off()
+#    backlight.off()
+    return redirect("/", code=302)
 
 
 def load_buttons():
