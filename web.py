@@ -1,15 +1,14 @@
 import json
-
 import os
 from flask import Flask, render_template, redirect, request
-
 import tv
-from screen import BackLight
+import logging
+
+log = logging.getLogger('werkzeug')
+log.setLevel(logging.ERROR)
 
 app = Flask(__name__)
-# app.debug = False
 BUTTONS = {}
-#backlight = BackLight()
 
 
 @app.route('/')
@@ -40,18 +39,6 @@ def shutdown():
         raise RuntimeError('Not running with the Werkzeug Server')
     func()
     return 'Server shutting down...'
-
-
-@app.route('/bl-on')
-def backlight_on():
-    #backlight.on()
-    return redirect("/", code=302)
-
-
-@app.route('/bl-off')
-def backlight_off():
-#    backlight.off()
-    return redirect("/", code=302)
 
 
 def load_buttons():
