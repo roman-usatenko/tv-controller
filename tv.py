@@ -20,7 +20,7 @@ def get_state():
 def on():
     if not is_on():
         lirc('KEY_POWER')
-        sleep(12)
+        sleep(15)
 
 
 def off():

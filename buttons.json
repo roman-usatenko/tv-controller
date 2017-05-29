@@ -1,7 +1,27 @@
 [
   {
+    "id":"comp",
+    "icon":"blank.jpg",
+    "script":["KEY_1", "~3", "KEY_MEDIA", "KEY_DOWN", "KEY_OK"]
+  },
+  {
     "id":"chromecast",
     "icon":"chromecast.jpg",
     "script":["KEY_1", "~3", "KEY_MEDIA", "KEY_DOWN", "KEY_DOWN", "KEY_OK"]
+  },
+  {
+    "id":"abc",
+    "icon":"abc.jpg",
+    "script":["KEY_4", "KEY_DOT", "KEY_1"]
+  },
+  {
+    "id":"king5",
+    "icon":"king5.png",
+    "script":["KEY_5", "KEY_DOT", "KEY_1"]
+  },
+  {
+    "id":"kiro7",
+    "icon":"kiro7.png",
+    "script":["KEY_7", "KEY_DOT", "KEY_1"]
   }
 ]
