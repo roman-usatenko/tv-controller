@@ -44,3 +44,4 @@ def cleanup():
 def lirc(key):
     print key
     call(['/usr/bin/irsend', 'SEND_ONCE', 'MY_PHILIPS', key])
+    sleep(0.7)

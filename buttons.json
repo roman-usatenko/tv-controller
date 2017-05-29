@@ -2,6 +2,6 @@
   {
     "id":"chromecast",
     "icon":"chromecast.jpg",
-    "script":["KEY_1", "~2", "KEY_MEDIA", "KEY_DOWN", "KEY_DOWN"]
+    "script":["KEY_1", "~3", "KEY_MEDIA", "KEY_DOWN", "KEY_DOWN", "KEY_OK"]
   }
 ]
