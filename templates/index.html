@@ -8,20 +8,14 @@
     <link rel="stylesheet" type="text/css" href="static/bootstrap.min.css"/>
     <script>
         go = function(url) {
-            document.getElementById('main').style.display = 'none'
-            document.getElementById('progress').style.display = 'block'
+            document.getElementById('main').style.display = 'none';
+            document.getElementById('spinner').style.display = 'block';
             location.href=url;
         }
     </script>
 </head>
 <body>
-<div id="progress" class="progress" style="display: block">
-    <div class="progress-bar progress-bar-striped active" role="progressbar"
-         aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%">
-        Processing...
-    </div>
-</div>
-
+<img id="spinner" class="spinner" src="static/spinner.gif"  style="display: none" />
 <div id="main" class="container-fluid">
     <div class="row" style="padding: 5px;">
         <button

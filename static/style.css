@@ -11,3 +11,11 @@
     width: 100px !important;
     height: 100px !important;
 }
+
+.spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -200px;
+    margin-top: -150px;
+}
