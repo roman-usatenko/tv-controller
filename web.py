@@ -4,10 +4,12 @@ import os
 from flask import Flask, render_template, redirect, request
 
 import tv
+from screen import BackLight
 
 app = Flask(__name__)
 # app.debug = False
 BUTTONS = {}
+backlight = BackLight()
 
 
 @app.route('/')
@@ -38,6 +40,16 @@ def shutdown():
         raise RuntimeError('Not running with the Werkzeug Server')
     func()
     return 'Server shutting down...'
+
+
+@app.route('/bl-on')
+def backlight_on():
+    backlight.on()
+
+
+@app.route('/bl-off')
+def backlight_off():
+    backlight.off()
 
 
 def load_buttons():

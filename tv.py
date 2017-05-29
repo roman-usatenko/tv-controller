@@ -20,12 +20,13 @@ def get_state():
 def on():
     if not is_on():
         lirc('KEY_POWER')
-        sleep(15)
+        sleep(17)
 
 
 def off():
     if is_on():
         lirc('KEY_POWER')
+        sleep(3)
 
 
 def do_script(script):
