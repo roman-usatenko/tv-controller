@@ -1,8 +1,9 @@
+from subprocess import call
 from time import sleep
 
 import RPi.GPIO as GPIO
 
-PIN = 17
+PIN = 27
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(PIN, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
@@ -19,6 +20,7 @@ def get_state():
 def on():
     if not is_on():
         lirc('KEY_POWER')
+        sleep(7)
 
 
 def off():
@@ -41,4 +43,4 @@ def cleanup():
 
 def lirc(key):
     print key
-    # call(['echo', key])
+    call(['/usr/bin/irsend', 'SEND_ONCE', 'MY_PHILIPS', key])

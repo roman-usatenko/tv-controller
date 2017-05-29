@@ -1,7 +1,7 @@
 import json
 
 import os
-from flask import Flask, render_template, redirect
+from flask import Flask, render_template, redirect, request
 
 import tv
 
@@ -29,6 +29,15 @@ def button(btn):
     if b:
         tv.do_script(b['script'])
     return redirect("/", code=302)
+
+
+@app.route('/shutdown')
+def shutdown():
+    func = request.environ.get('werkzeug.server.shutdown')
+    if func is None:
+        raise RuntimeError('Not running with the Werkzeug Server')
+    func()
+    return 'Server shutting down...'
 
 
 def load_buttons():
